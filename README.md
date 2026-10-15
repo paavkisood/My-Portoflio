@@ -106,7 +106,7 @@
     HTML, CSS and JavaScript.
   </p>
 
-  <a href="hackathon2.0" target="_blank">
+  <a href="index.html" target="_blank">
     Play the Game
   </a>
 </div>
