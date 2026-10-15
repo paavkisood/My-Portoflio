@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMate - Cognitive Wellness</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="topbar">
+
+    <div class="brand">
+        <div class="brand-icon">🧠</div>
+
+        <div>
+            <h1>MindMate</h1>
+            <p>Cognitive Wellness Companion</p>
+        </div>
+    </div>
+
+    <div class="header-actions">
+
+        <button class="voice-button" id="voiceButton">
+            🔊 Voice
+        </button>
+
+        <button class="profile-button" id="profileButton">
+            👤 <span id="profileName">Guest</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     MAIN APP
+========================= -->
+
+<main class="app-container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <button class="nav-button active" data-section="home">
+            🏠
+            <span>Home</span>
+        </button>
+
+        <button class="nav-button" data-section="games">
+            🧩
+            <span>Brain Games</span>
+        </button>
+
+        <button class="nav-button" data-section="progress">
+            📊
+            <span>My Progress</span>
+        </button>
+
+        <button class="nav-button" data-section="caregiver">
+            ❤️
+            <span>Caregiver</span>
+        </button>
+
+        <button class="nav-button" data-section="about">
+            ℹ️
+            <span>About MindMate</span>
+        </button>
+
+    </aside>
+
+
+    <!-- CONTENT -->
+
+    <section class="content">
+
+
+        <!-- =========================
+             HOME
+        ========================= -->
+
+        <section id="home" class="page active-page">
+
+            <div class="welcome-card">
+
+                <div>
+
+                    <p class="small-label">WELCOME TO MINDMATE</p>
+
+                    <h2>
+                        Keep your mind active,
+                        one game at a time. 🌿
+                    </h2>
+
+                    <p>
+                        Short, enjoyable brain exercises designed
+                        to practice memory, attention and thinking.
+                    </p>
+
+                    <button class="primary-button" id="startPlayingButton">
+                        🧠 Start Playing
+                    </button>
+
+                </div>
+
+                <div class="welcome-illustration">
+                    🧠
+                </div>
+
+            </div>
+
+
+            <!-- DAILY GOAL -->
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Today's Brain Activity</h2>
+                    <p>A few minutes of activity can make your day more engaging.</p>
+                </div>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon">🎮</div>
+                    <div>
+                        <span>Games Played</span>
+                        <strong id="homeGamesPlayed">0</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div>
+                        <span>Best Score</span>
+                        <strong id="homeBestScore">0</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div>
+                        <span>Current Streak</span>
+                        <strong id="homeStreak">0 days</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- QUICK GAMES -->
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Choose a Brain Game</h2>
+                    <p>Pick one and give your brain a little workout.</p>
+                </div>
+
+            </div>
+
+
+            <div class="game-grid">
+
+                <div class="game-card" data-game="memory">
+                    <div class="game-icon purple">🃏</div>
+                    <h3>Memory Match</h3>
+                    <p>Remember where matching cards are hidden.</p>
+                    <button class="game-start">Play Game →</button>
+                </div>
+
+                <div class="game-card" data-game="numbers">
+                    <div class="game-icon blue">🔢</div>
+                    <h3>Number Recall</h3>
+                    <p>Remember a number sequence and enter it correctly.</p>
+                    <button class="game-start">Play Game →</button>
+                </div>
+
+                <div class="game-card" data-game="pattern">
+                    <div class="game-icon green">🎨</div>
+                    <h3>Pattern Recall</h3>
+                    <p>Watch a pattern and recreate it from memory.</p>
+                    <button class="game-start">Play Game →</button>
+                </div>
+
+                <div class="game-card" data-game="focus">
+                    <div class="game-icon orange">🎯</div>
+                    <h3>Focus Finder</h3>
+                    <p>Find the target symbol among similar objects.</p>
+                    <button class="game-start">Play Game →</button>
+                </div>
+
+            </div>
+
+
+            <div class="tip-card">
+
+                <div class="tip-icon">💡</div>
+
+                <div>
+                    <h3>MindMate Tip</h3>
+                    <p>
+                        Take your time. The goal is not to be perfect.
+                        Regular, comfortable practice is more important.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             GAMES
+        ========================= -->
+
+        <section id="games" class="page">
+
+            <div class="page-heading">
+
+                <div>
+                    <p class="small-label">BRAIN GAMES</p>
+                    <h2>Choose Your Activity</h2>
+                    <p>
+                        Each game practices a different thinking skill.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="game-grid large-grid">
+
+                <div class="game-card" data-game="memory">
+
+                    <div class="game-icon purple">🃏</div>
+
+                    <h3>Memory Match</h3>
+
+                    <p>
+                        Match pairs of cards using your memory.
+                    </p>
+
+                    <div class="game-info">
+                        <span>🧠 Memory</span>
+                        <span>⏱ Easy</span>
+                    </div>
+
+                    <button class="primary-button game-start">
+                        Start Memory Match
+                    </button>
+
+                </div>
+
+
+                <div class="game-card" data-game="numbers">
+
+                    <div class="game-icon blue">🔢</div>
+
+                    <h3>Number Recall</h3>
+
+                    <p>
+                        Remember numbers shown briefly on screen.
+                    </p>
+
+                    <div class="game-info">
+                        <span>🧠 Recall</span>
+                        <span>⏱ Easy</span>
+                    </div>
+
+                    <button class="primary-button game-start">
+                        Start Number Recall
+                    </button>
+
+                </div>
+
+
+                <div class="game-card" data-game="pattern">
+
+                    <div class="game-icon green">🎨</div>
+
+                    <h3>Pattern Recall</h3>
+
+                    <p>
+                        Watch the pattern and reproduce it.
+                    </p>
+
+                    <div class="game-info">
+                        <span>🧠 Memory</span>
+                        <span>🎨 Visual</span>
+                    </div>
+
+                    <button class="primary-button game-start">
+                        Start Pattern Recall
+                    </button>
+
+                </div>
+
+
+                <div class="game-card" data-game="focus">
+
+                    <div class="game-icon orange">🎯</div>
+
+                    <h3>Focus Finder</h3>
+
+                    <p>
+                        Find the different target as quickly as you can.
+                    </p>
+
+                    <div class="game-info">
+                        <span>🧠 Attention</span>
+                        <span>⚡ Focus</span>
+                    </div>
+
+                    <button class="primary-button game-start">
+                        Start Focus Finder
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROGRESS
+        ========================= -->
+
+        <section id="progress" class="page">
+
+            <div class="page-heading">
+
+                <div>
+                    <p class="small-label">YOUR JOURNEY</p>
+
+                    <h2>My Progress</h2>
+
+                    <p>
+                        MindMate keeps a simple record of your game performance.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="progress-summary">
+
+                <div class="big-stat">
+                    <span>Total Games</span>
+                    <strong id="totalGames">0</strong>
+                </div>
+
+                <div class="big-stat">
+                    <span>Average Score</span>
+                    <strong id="averageScore">0</strong>
+                </div>
+
+                <div class="big-stat">
+                    <span>Best Score</span>
+                    <strong id="progressBestScore">0</strong>
+                </div>
+
+                <div class="big-stat">
+                    <span>Games Today</span>
+                    <strong id="gamesToday">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="progress-panel">
+
+                <h3>Performance by Skill</h3>
+
+                <div class="skill-row">
+
+                    <div class="skill-label">
+                        <span>🧠 Memory</span>
+                        <strong id="memoryPercent">0%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="memoryBar"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <div class="skill-label">
+                        <span>🔢 Recall</span>
+                        <strong id="recallPercent">0%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="recallBar"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <div class="skill-label">
+                        <span>🎯 Attention</span>
+                        <strong id="attentionPercent">0%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="attentionBar"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <div class="skill-label">
+                        <span>🎨 Visual Thinking</span>
+                        <strong id="visualPercent">0%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="visualBar"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="history-panel">
+
+                <div class="history-header">
+
+                    <div>
+                        <h3>Recent Activities</h3>
+                        <p>Your latest game results.</p>
+                    </div>
+
+                    <button class="secondary-button" id="clearProgress">
+                        Clear History
+                    </button>
+
+                </div>
+
+                <div id="historyList"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CAREGIVER
+        ========================= -->
+
+        <section id="caregiver" class="page">
+
+            <div class="page-heading">
+
+                <div>
+                    <p class="small-label">CAREGIVER VIEW</p>
+
+                    <h2>Caregiver Dashboard</h2>
+
+                    <p>
+                        A simple overview of activity and performance.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="caregiver-alert" id="caregiverAlert">
+
+                <div class="alert-icon">✓</div>
+
+                <div>
+                    <h3>Keep Monitoring</h3>
+
+                    <p id="caregiverMessage">
+                        Complete more activities to build a meaningful
+                        performance history.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="caregiver-grid">
+
+                <div class="care-card">
+
+                    <span>Activity Level</span>
+
+                    <strong id="activityLevel">
+                        Starting
+                    </strong>
+
+                    <p>
+                        Based on recent game activity.
+                    </p>
+
+                </div>
+
+
+                <div class="care-card">
+
+                    <span>Recent Accuracy</span>
+
+                    <strong id="recentAccuracy">
+                        0%
+                    </strong>
+
+                    <p>
+                        Average accuracy from recent games.
+                    </p>
+
+                </div>
+
+
+                <div class="care-card">
+
+                    <span>Trend</span>
+
+                    <strong id="performanceTrend">
+                        Building Data
+                    </strong>
+
+                    <p>
+                        Compared with earlier activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="caregiver-note">
+
+                <h3>⚠️ Important</h3>
+
+                <p>
+                    MindMate is designed for cognitive exercise and
+                    performance tracking. It does not diagnose Alzheimer's
+                    disease or dementia. A noticeable or persistent change
+                    in memory or thinking should be discussed with a
+                    qualified healthcare professional.
+                </p>
+
+            </div>
+
+
+            <div class="report-card">
+
+                <h3>How MindMate Helps Families</h3>
+
+                <div class="report-points">
+
+                    <div>
+                        <span>1</span>
+                        <p>Encourages regular cognitive activity.</p>
+                    </div>
+
+                    <div>
+                        <span>2</span>
+                        <p>Records performance over time.</p>
+                    </div>
+
+                    <div>
+                        <span>3</span>
+                        <p>Shows changes in accuracy and response time.</p>
+                    </div>
+
+                    <div>
+                        <span>4</span>
+                        <p>Can help families notice when further professional assessment may be worth discussing.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
+
+        <section id="about" class="page">
+
+            <div class="page-heading">
+
+                <div>
+                    <p class="small-label">ABOUT THE PROJECT</p>
+
+                    <h2>Why MindMate?</h2>
+
+                    <p>
+                        Making cognitive activity simpler, friendlier
+                        and more engaging for older adults.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🧠
+                </div>
+
+                <div>
+
+                    <h3>The Idea</h3>
+
+                    <p>
+                        MindMate combines simple brain games with
+                        progress tracking. Instead of presenting cognitive
+                        exercises like a medical test, the goal is to make
+                        them feel like a friendly daily activity.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-features">
+
+                <div>
+                    <span>🧠</span>
+                    <h3>Memory</h3>
+                    <p>Exercises that involve remembering information.</p>
+                </div>
+
+                <div>
+                    <span>🎯</span>
+                    <h3>Attention</h3>
+                    <p>Exercises that require concentration and focus.</p>
+                </div>
+
+                <div>
+                    <span>📈</span>
+                    <h3>Tracking</h3>
+                    <p>Performance is stored locally to show progress.</p>
+                </div>
+
+                <div>
+                    <span>❤️</span>
+                    <h3>Caregiver Support</h3>
+                    <p>Families can review activity and performance trends.</p>
+                </div>
+
+            </div>
+
+
+            <div class="disclaimer">
+
+                <strong>Medical Disclaimer</strong>
+
+                <p>
+                    MindMate is a prototype for cognitive wellness,
+                    engagement and performance tracking. It is not a
+                    medical device and does not diagnose, prevent or
+                    predict dementia or Alzheimer's disease.
+                </p>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================
+     GAME MODAL
+========================= -->
+
+<div class="game-modal" id="gameModal">
+
+    <div class="game-window">
+
+        <div class="game-header">
+
+            <div>
+
+                <span class="game-category" id="gameCategory">
+                    BRAIN GAME
+                </span>
+
+                <h2 id="gameTitle">
+                    Game
+                </h2>
+
+            </div>
+
+            <button class="close-button" id="closeGame">
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="game-status">
+
+            <div>
+                <span>Score</span>
+                <strong id="gameScore">0</strong>
+            </div>
+
+            <div>
+                <span>Round</span>
+                <strong id="gameRound">1</strong>
+            </div>
+
+            <div>
+                <span>Time</span>
+                <strong id="gameTimer">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="game-content" id="gameContent">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     PROFILE MODAL
+========================= -->
+
+<div class="profile-modal" id="profileModal">
+
+    <div class="profile-window">
+
+        <button class="close-button" id="closeProfile">
+            ✕
+        </button>
+
+        <div class="profile-icon">
+            👤
+        </div>
+
+        <h2>Welcome to MindMate</h2>
+
+        <p>
+            Enter a name so your progress can be displayed.
+        </p>
+
+        <input
+            type="text"
+            id="nameInput"
+            placeholder="Enter name"
+            maxlength="30"
+        >
+
+        <button class="primary-button" id="saveProfile">
+            Save Profile
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

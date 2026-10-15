@@ -1,0 +1,1466 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f5f7f4;
+    --card: #ffffff;
+    --text: #24302a;
+    --muted: #68756d;
+    --primary: #4d8061;
+    --primary-dark: #356449;
+    --light-green: #e6f1e8;
+    --border: #e1e7e2;
+    --shadow: 0 12px 35px rgba(30, 50, 38, 0.08);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar {
+    height: 78px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 15px;
+
+    background: var(--light-green);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+.brand h1 {
+    font-size: 24px;
+}
+
+.brand p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.voice-button,
+.profile-button {
+    border: 1px solid var(--border);
+    background: white;
+    padding: 11px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.voice-button:hover,
+.profile-button:hover {
+    background: var(--light-green);
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.app-container {
+    display: flex;
+    min-height: calc(100vh - 78px);
+}
+
+.sidebar {
+    width: 220px;
+    background: white;
+    border-right: 1px solid var(--border);
+    padding: 25px 15px;
+}
+
+.nav-button {
+    width: 100%;
+    border: none;
+    background: transparent;
+
+    padding: 15px 18px;
+
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    font-size: 16px;
+    color: var(--muted);
+
+    cursor: pointer;
+
+    margin-bottom: 8px;
+
+    text-align: left;
+}
+
+.nav-button:hover {
+    background: #f1f5f2;
+}
+
+.nav-button.active {
+    background: var(--light-green);
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+
+.content {
+    flex: 1;
+    padding: 35px;
+    max-width: 1500px;
+}
+
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page {
+    display: none;
+}
+
+.page.active-page {
+    display: block;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+.page-heading {
+    margin-bottom: 30px;
+}
+
+.small-label {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.page-heading h2,
+.section-title h2 {
+    font-size: 31px;
+    margin-bottom: 7px;
+}
+
+.page-heading p,
+.section-title p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome-card {
+    background:
+        linear-gradient(
+            135deg,
+            #e9f3eb,
+            #f7faf7
+        );
+
+    border: 1px solid #dce9df;
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+}
+
+.welcome-card h2 {
+    font-size: 39px;
+    line-height: 1.15;
+    max-width: 650px;
+    margin: 8px 0 15px;
+}
+
+.welcome-card p {
+    color: var(--muted);
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+.welcome-illustration {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-button {
+    border: none;
+
+    background: var(--primary);
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    margin-top: 20px;
+}
+
+.primary-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.secondary-button {
+    border: 1px solid var(--border);
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background: #f1f5f2;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 4px 15px rgba(30, 50, 38, 0.03);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 14px;
+
+    background: var(--light-green);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.stat-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.stat-card strong {
+    font-size: 25px;
+}
+
+
+/* =========================
+   GAME CARDS
+========================= */
+
+.game-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.large-grid {
+    grid-template-columns:
+        repeat(2, 1fr);
+}
+
+.game-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 5px 20px rgba(30, 50, 38, 0.04);
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.game-icon {
+    width: 62px;
+    height: 62px;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
+}
+
+.purple {
+    background: #eee8ff;
+}
+
+.blue {
+    background: #e5f1ff;
+}
+
+.green {
+    background: #e3f5e7;
+}
+
+.orange {
+    background: #fff0df;
+}
+
+.game-card h3 {
+    font-size: 21px;
+    margin-bottom: 9px;
+}
+
+.game-card p {
+    color: var(--muted);
+    line-height: 1.6;
+    min-height: 55px;
+}
+
+.game-start {
+    border: none;
+    background: transparent;
+    color: var(--primary-dark);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.game-info {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.game-info span {
+    background: #f2f5f3;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   TIP
+========================= */
+
+.tip-card {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #fffdf3;
+
+    border: 1px solid #f0e9c7;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.tip-icon {
+    font-size: 30px;
+}
+
+.tip-card h3 {
+    margin-bottom: 5px;
+}
+
+.tip-card p {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.big-stat {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    padding: 23px;
+}
+
+.big-stat span {
+    display: block;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.big-stat strong {
+    font-size: 31px;
+}
+
+.progress-panel,
+.history-panel {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 27px;
+
+    margin-bottom: 25px;
+}
+
+.progress-panel h3,
+.history-panel h3 {
+    margin-bottom: 25px;
+    font-size: 21px;
+}
+
+.skill-row {
+    margin-bottom: 20px;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    height: 13px;
+    background: #edf1ee;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar div {
+    height: 100%;
+    width: 0%;
+    background: var(--primary);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.history-icon {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--light-green);
+}
+
+.history-left strong {
+    display: block;
+}
+
+.history-left span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.history-score {
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+.empty-history {
+    padding: 30px;
+    text-align: center;
+    color: var(--muted);
+}
+
+
+/* =========================
+   CAREGIVER
+========================= */
+
+.caregiver-alert {
+    background: #edf7ef;
+
+    border: 1px solid #d7e9da;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    display: flex;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.alert-icon {
+    width: 45px;
+    height: 45px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.caregiver-alert h3 {
+    margin-bottom: 5px;
+}
+
+.caregiver-alert p {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.caregiver-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.care-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 25px;
+}
+
+.care-card span {
+    display: block;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.care-card strong {
+    font-size: 26px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.care-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.caregiver-note,
+.report-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+.caregiver-note {
+    background: #fff9ef;
+    border-color: #f1e3c8;
+}
+
+.caregiver-note h3 {
+    margin-bottom: 10px;
+}
+
+.caregiver-note p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.report-card h3 {
+    margin-bottom: 20px;
+}
+
+.report-points {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.report-points div {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.report-points span {
+    min-width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: var(--light-green);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+.report-points p {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.about-icon {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 22px;
+
+    background: var(--light-green);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+
+    flex-shrink: 0;
+}
+
+.about-card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.about-features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.about-features div {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 22px;
+}
+
+.about-features span {
+    font-size: 30px;
+}
+
+.about-features h3 {
+    margin: 10px 0 5px;
+}
+
+.about-features p {
+    color: var(--muted);
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.disclaimer {
+    padding: 20px;
+
+    background: #f1f4f2;
+
+    border-radius: 15px;
+
+    color: var(--muted);
+
+    line-height: 1.6;
+}
+
+.disclaimer strong {
+    color: var(--text);
+    display: block;
+    margin-bottom: 6px;
+}
+
+
+/* =========================
+   GAME MODAL
+========================= */
+
+.game-modal,
+.profile-modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(20, 30, 24, 0.55);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 500;
+}
+
+.game-modal.show,
+.profile-modal.show {
+    display: flex;
+}
+
+.game-window {
+    width: min(900px, 100%);
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    box-shadow: 0 30px 70px rgba(0,0,0,0.2);
+}
+
+.game-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    border-bottom: 1px solid var(--border);
+
+    padding-bottom: 20px;
+}
+
+.game-category {
+    color: var(--primary);
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    font-weight: bold;
+}
+
+.game-header h2 {
+    font-size: 29px;
+    margin-top: 5px;
+}
+
+.close-button {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #f1f4f2;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.close-button:hover {
+    background: #e4e9e5;
+}
+
+.game-status {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin: 20px 0;
+}
+
+.game-status div {
+    background: #f6f8f6;
+
+    border-radius: 13px;
+
+    padding: 12px;
+
+    text-align: center;
+}
+
+.game-status span {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.game-status strong {
+    display: block;
+    font-size: 21px;
+    margin-top: 3px;
+}
+
+.game-content {
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   MEMORY GAME
+========================= */
+
+.memory-board {
+    width: 100%;
+    max-width: 650px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+.memory-card {
+    aspect-ratio: 1;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: #dfece2;
+
+    cursor: pointer;
+
+    font-size: 35px;
+
+    transition: transform 0.2s;
+}
+
+.memory-card:hover {
+    transform: scale(1.03);
+}
+
+.memory-card.flipped,
+.memory-card.matched {
+    background: var(--light-green);
+}
+
+.memory-card.matched {
+    opacity: 0.65;
+    cursor: default;
+}
+
+
+/* =========================
+   NUMBER GAME
+========================= */
+
+.number-game {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.number-instruction {
+    color: var(--muted);
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.number-display {
+    background: #f1f7f2;
+
+    border-radius: 20px;
+
+    padding: 40px 20px;
+
+    font-size: 55px;
+
+    font-weight: bold;
+
+    letter-spacing: 12px;
+
+    margin-bottom: 25px;
+}
+
+.number-input {
+    width: 100%;
+
+    border: 2px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 16px;
+
+    font-size: 25px;
+
+    text-align: center;
+
+    outline: none;
+}
+
+.number-input:focus {
+    border-color: var(--primary);
+}
+
+.number-submit {
+    width: 100%;
+}
+
+
+/* =========================
+   PATTERN GAME
+========================= */
+
+.pattern-game {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.pattern-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 70px);
+
+    gap: 10px;
+
+    justify-content: center;
+
+    margin: 25px 0;
+}
+
+.pattern-cell {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 12px;
+
+    border: none;
+
+    background: #e9eeea;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+.pattern-cell.active {
+    background: var(--primary);
+    transform: scale(1.05);
+}
+
+.pattern-cell.selected {
+    background: #7eaa8c;
+}
+
+
+/* =========================
+   FOCUS GAME
+========================= */
+
+.focus-game {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+}
+
+.focus-board {
+    position: relative;
+
+    width: 100%;
+    height: 330px;
+
+    background: #f3f6f3;
+
+    border-radius: 20px;
+
+    margin: 20px 0;
+}
+
+.focus-item {
+    position: absolute;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 30px;
+
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+.focus-item:hover {
+    background: #e4ebe5;
+}
+
+.focus-target {
+    animation: targetPulse 1s infinite;
+}
+
+@keyframes targetPulse {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result-screen {
+    text-align: center;
+
+    width: 100%;
+
+    max-width: 600px;
+}
+
+.result-icon {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.result-screen h2 {
+    font-size: 31px;
+    margin-bottom: 10px;
+}
+
+.result-score {
+    font-size: 45px;
+
+    color: var(--primary-dark);
+
+    font-weight: bold;
+
+    margin: 20px;
+}
+
+.result-message {
+    color: var(--muted);
+
+    line-height: 1.6;
+
+    font-size: 17px;
+}
+
+.result-actions {
+    display: flex;
+
+    gap: 10px;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-window {
+    width: min(450px, 100%);
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.profile-icon {
+    font-size: 60px;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: var(--light-green);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+}
+
+.profile-window h2 {
+    margin-bottom: 8px;
+}
+
+.profile-window p {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.profile-window input {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    outline: none;
+}
+
+.profile-window input:focus {
+    border-color: var(--primary);
+}
+
+.profile-window .primary-button {
+    width: 100%;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        width: 80px;
+    }
+
+    .nav-button {
+        justify-content: center;
+        padding: 15px 5px;
+    }
+
+    .nav-button span {
+        display: none;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    .stats-grid,
+    .progress-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .caregiver-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .topbar {
+        padding: 0 15px;
+    }
+
+    .brand p {
+        display: none;
+    }
+
+    .profile-button span {
+        display: none;
+    }
+
+    .content {
+        padding: 18px;
+    }
+
+    .welcome-card {
+        padding: 25px;
+    }
+
+    .welcome-card h2 {
+        font-size: 29px;
+    }
+
+    .welcome-illustration {
+        display: none;
+    }
+
+    .game-grid,
+    .large-grid,
+    .stats-grid,
+    .progress-summary,
+    .about-features,
+    .report-points {
+        grid-template-columns: 1fr;
+    }
+
+    .game-window {
+        padding: 20px;
+    }
+
+    .memory-board {
+        gap: 7px;
+    }
+
+    .memory-card {
+        font-size: 25px;
+    }
+
+    .pattern-grid {
+        grid-template-columns: repeat(4, 55px);
+    }
+
+    .pattern-cell {
+        width: 55px;
+        height: 55px;
+    }
+
+    .number-display {
+        font-size: 35px;
+        letter-spacing: 6px;
+    }
+
+}
