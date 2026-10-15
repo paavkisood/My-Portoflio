@@ -154,11 +154,16 @@
       </a>
     </p>
     <p>Email: paavkisood1@gmail.com</p>
-  
-    <p>LinkedIn: https://www.linkedin.com/in/paavki-sood-4bb767443</p>
+  <p>LinkedIn: 
+    <a href="https://www.linkedin.com/in/paavki-sood-4bb767443"
+      target="_blank">
+      Visit my LinkedIn
+    </a>
+  </p>
   </section>
   
   <footer>
     <p>© 2026 Paavki Sood | My Portfolio</p>
   </footer>
-
+</body>
+</html>
