@@ -118,7 +118,7 @@
   <br>
 
   <a
-    href="https://github.com/YOUR-paavkisood/Memory-Game"
+    href="https://github.com/paavkisood/Memory-Game"
     target="_blank"
     rel="noopener noreferrer"
   >
