@@ -105,6 +105,16 @@
     </div>
   </section>
 
+<div class="project">
+  <h3>My Certificate</h3>
+
+  <img
+    src="hackathon certificate.jpeg"
+    alt="My course completion certificate"
+    style="width:100%; max-width:600px; border-radius:10px;"
+  >
+</div>
+
   <section id="contact">
     <h2>Contact Me</h2>
     <p>GitHub:
