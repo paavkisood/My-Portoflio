@@ -100,16 +100,34 @@
 </div>
 
 <div class="project">
-  <h3>Memory Game for the elders suffering from memory issues</h3>
+  <h3>Memory Matching Game</h3>
+
   <p>
-    A fun memory-based game for our elders suffering from dementia and other memory related diseases/disorders built using
+    An interactive card-matching game built using
     HTML, CSS and JavaScript.
   </p>
 
-  <a href="index.html" target="_blank">
-    Play the Game
+  <a
+    href="https://paavkisood.github.io/Memory-Game./"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Play Game →
+  </a>
+
+  <br>
+
+  <a
+    href="https://github.com/YOUR-paavkisood/Memory-Game"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    View Source Code
   </a>
 </div>
+
+
+
 
    
   
