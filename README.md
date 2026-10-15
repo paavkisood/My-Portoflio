@@ -106,14 +106,21 @@
   </section>
 
 <div class="project">
-  <h3>My Certificate</h3>
+  
+<section id="certifications">
+  <h2>My Certifications</h2>
 
-  <img
-    src="hackathon certificate.jpeg"
-    alt="My course completion certificate"
-    style="width:100%; max-width:600px; border-radius:10px;"
-  >
-</div>
+  <div class="project">
+    <h3>hackathon certificate</h3>
+    <p>Participation in a hackathon.</p>
+    <a href="hackathon certificate.jpeg"
+       target="_blank">
+      View Certificate
+    </a>
+  </div>
+
+  
+
 
   <section id="contact">
     <h2>Contact Me</h2>
