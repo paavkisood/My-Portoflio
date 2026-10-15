@@ -97,15 +97,6 @@
     <div class="project">
       <h3>Project 1: Memory game for the elders suffering from memory issues</h3>
       <p>A simple game built using HTML, CSS and JavaScript.</p>
-      
-<div class="project">
-  <h3>My Course Certificate</h3>
-
-  <img
-    src="certificates/my-certificate.jpg"
-    alt="My course completion certificate"
-    style="width:100%; max-width:600px; border-radius:10px;"
-  >
 </div>
 
     <div class="project">
