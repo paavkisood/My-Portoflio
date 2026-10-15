@@ -106,7 +106,7 @@
     HTML, CSS and JavaScript.
   </p>
 
-  <a href="memory-game/" target="_blank">
+  <a href="hackathon2.0" target="_blank">
     Play the Game
   </a>
 </div>
