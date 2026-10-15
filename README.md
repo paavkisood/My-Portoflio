@@ -95,17 +95,23 @@
     <h2>My Projects</h2>
 
     <div class="project">
-      <h3>Project 1: Memory game for the elders suffering from memory issues</h3>
+      <h3>Project 1: Memory Game for the elders suffering from memory issues</h3>
       <p>A simple game built using HTML, CSS and JavaScript.</p>
 </div>
 
-    <div class="project">
-      <h3>Project 2: My Portfolio</h3>
-      <p>A personal website created to showcase my work.</p>
-    </div>
-  </section>
-
 <div class="project">
+  <h3>Memory Game for the elders suffering from memory issues</h3>
+  <p>
+    A fun memory-based game for our elders suffering from dementia and other memory related diseases/disorders built using
+    HTML, CSS and JavaScript.
+  </p>
+
+  <a href="memory-game/" target="_blank">
+    Play the Game
+  </a>
+</div>
+
+   
   
 <section id="certifications">
   <h2>My Certifications</h2>
